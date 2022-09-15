@@ -18,32 +18,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text("News"),
-        actions: [
-          IconButton(
-            onPressed: () {
-              newsController.country.value = '';
-              newsController.category.value = '';
-              newsController.findNews.value = '';
-              newsController.cName.value = '';
-              newsController.getNews(reload: true);
-              newsController.update();
-            },
-            icon: Icon(Icons.refresh),
-          ),
-          GetBuilder<NewsController>(
-            builder: (controller) => Switch(
-              value: controller.isSwitched == true ? true : false,
-              onChanged: (value) => controller.changeTheme(value),
-              activeTrackColor: Colors.yellow,
-              activeColor: Colors.red,
-            ),
-            init: NewsController(),
-          ),
-        ],
-      ),
       bottomNavigationBar: Obx(
         () => CustomNavigationBar(
           elevation: 5,
