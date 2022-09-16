@@ -1,14 +1,10 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:dualdoc/view/MoviesPage.dart';
 import 'package:dualdoc/view/NewsPage.dart';
-import 'package:dualdoc/view/ViewNews.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:heroicons/heroicons.dart';
 import 'package:hexcolor/hexcolor.dart';
-
-import 'package:sizer/sizer.dart';
 
 import '../contoller/NewsController.dart';
 
@@ -21,9 +17,10 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: Obx(
         () => CustomNavigationBar(
           elevation: 5,
-          isFloating: true,
+          //isFloating: true,
           iconSize: 30.0,
-          borderRadius: Radius.circular(12),
+
+          //borderRadius: Radius.circular(12),
           // selectedColor: theme.neoncolor,
           strokeColor: Color(0x30040307),
           unSelectedColor: Colors.white,

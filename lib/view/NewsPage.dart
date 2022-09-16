@@ -2,8 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dualdoc/view/ViewNews.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:heroicons/heroicons.dart';
+
 import 'package:sizer/sizer.dart';
 
 import '../contoller/NewsController.dart';
@@ -64,7 +63,7 @@ class NewsBuilder extends StatelessWidget {
                                   onTap: () => Get.to(ViewNews(
                                       newsUrl: controller.news[index].url)),
                                   child: Container(
-                                    padding: EdgeInsets.symmetric(
+                                    padding: const EdgeInsets.symmetric(
                                         vertical: 10, horizontal: 15),
                                     decoration: BoxDecoration(
                                         borderRadius:
@@ -79,7 +78,7 @@ class NewsBuilder extends StatelessWidget {
                                           controller.news[index].urlToImage ==
                                                   null
                                               ? Container(
-                                                  child: Center(
+                                                  child: const Center(
                                                       child:
                                                           Text("No Image !")),
                                                 )
@@ -134,37 +133,21 @@ class NewsBuilder extends StatelessWidget {
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                                "Published on: " +
-                                                    "${controller.news[index].publishedAt}"
-                                                        .replaceRange(
-                                                            10, 20, ""),
-                                                style: TextStyle(
+                                                "Published on: ${controller.news[index].publishedAt.replaceRange(10, 20, "")}",
+                                                style: const TextStyle(
                                                     fontWeight:
                                                         FontWeight.normal,
                                                     fontSize: 12)),
-                                            Padding(
-                                              padding:
-                                                  EdgeInsets.only(right: 4.w),
-                                              child: InkWell(
-                                                onTap: () {
-                                                  //  Share.share(controller.news[index].url);
-                                                },
-                                                child: HeroIcon(
-                                                  HeroIcons.share,
-                                                  size: 30,
-                                                ),
-                                              ),
-                                            ),
                                           ],
                                         ),
-                                        Divider(),
+                                        const Divider(),
                                         Text(
-                                            "Author: " +
-                                                "${controller.news[index].author}",
-                                            style: TextStyle(
+                                            "Author: "
+                                            "${controller.news[index].author}",
+                                            style: const TextStyle(
                                                 fontWeight: FontWeight.normal,
                                                 fontSize: 12)),
-                                        Divider(),
+                                        const Divider(),
                                       ],
                                     ),
                                   ),
@@ -172,9 +155,11 @@ class NewsBuilder extends StatelessWidget {
                               ),
                             ),
                             index == controller.news.length - 1 &&
+                                    // ignore: unrelated_type_equality_checks
                                     controller.isLoading == true
-                                ? Center(child: CircularProgressIndicator())
-                                : SizedBox(),
+                                ? const Center(
+                                    child: CircularProgressIndicator())
+                                : const SizedBox(),
                           ],
                         );
                       },

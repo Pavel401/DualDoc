@@ -28,7 +28,7 @@ class MoviesController extends GetxController {
       MovieList movieList = MovieList.fromJson(jsonDecode(res.body));
 
       // print(movieList.movies![1].posterPath);
-      if (movieList.movies!.length == 0 && movieList.totalMovies == 0) {
+      if (movieList.movies.length == 0 && movieList.totalMovies == 0) {
         notFound.value = isLoading.value == true ? false : true;
         isLoading.value = false;
         //print(movieList.movies);

@@ -6,6 +6,7 @@ import '../contoller/DialogProgressController.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
+// ignore: must_be_immutable
 class ViewNews extends StatelessWidget {
   final newsUrl;
 

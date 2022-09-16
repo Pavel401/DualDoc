@@ -1,10 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dualdoc/contoller/MoviesController.dart';
 import 'package:dualdoc/contoller/NewsController.dart';
 import 'package:dualdoc/view/MovieDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 import 'package:text_scroll/text_scroll.dart';
 
