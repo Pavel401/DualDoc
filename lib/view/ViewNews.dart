@@ -15,6 +15,7 @@ class ViewNews extends StatelessWidget {
   DiaLogController diaLogController = Get.put(DiaLogController());
   void openDialog() {
     Get.dialog(
+      barrierDismissible: false,
       AlertDialog(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
